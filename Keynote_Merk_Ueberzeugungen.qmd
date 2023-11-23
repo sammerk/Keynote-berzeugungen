@@ -1,0 +1,179 @@
+---
+title: "Überzeugungen"
+subtitle: "und Professionalität von Lehrkräften"
+author: "Samuel Merk"
+format: 
+  revealjs:
+      auto-stretch: true
+      self-contained: true
+      controls: true
+      slide-number: c/t
+      logo: img/PHlogo.svg
+      theme: [simple, css/custom.scss]
+      fullscreen: true
+      pdfexport: true
+bibliography: references.bib
+csl: apa.csl
+---
+
+## Leitfragen {.center}
+
+[{{< fa question-circle >}}]{.imp} Was sind Überzeugungen? 
+
+[{{< fa chalkboard-user >}}]{.imp} Überzeugungen ⇄ Professionalität?
+
+[{{< fa person-digging >}}]{.imp} Entwicklungsfelder der Überzeugungsforschung?
+
+```{r hidden chunk which creates template stuff}
+#| echo: false
+
+## in terminal ########
+# quarto install extension quarto-ext/fontawesome
+# quarto install extension schochastics/academicons
+#
+
+########################
+library(fontawesome)
+library(tidyverse)
+
+# Change css to lecker PH green
+if(!dir.exists("img"))
+dir.create("img")
+if(!dir.exists("css"))
+dir.create("css")
+fileConn<-file("css/custom.scss")
+writeLines(c("/*-- scss:defaults --*/",
+             "$link-color: #8cd000 !default;",
+             ".reveal h2 {color: #8cd000 !important;}"), fileConn)
+close(fileConn)
+
+# create sash with URL
+sash <- 
+  ggplot() + 
+  geom_polygon(data = tibble(x = c(0,4,5.5,0),
+                             y = c(1,5,5,-.5)),
+               aes(x,y), fill = "#8cd000") + 
+  coord_fixed() +
+  annotate(geom = "text", 
+           label = " ", 
+           x = .8, y = .8, 
+           angle = 45,
+           hjust = 0, vjust = 0,
+           size = 10,
+           color = "white") +
+ theme_void() + 
+ theme(plot.margin = margin(-2,0,0,-12, unit = "cm"))
+ggsave("img/sash.svg", sash)
+```
+
+```{css}
+.callout-title {background-color: #8cd000 !important;}
+
+.imp {
+  color: #8cd000;
+}
+
+
+figure>figcaption {
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+.citation {
+  font-size: .8em;
+  color: #8cd000;
+}
+  
+```
+
+::: footer
+Folien CC-BY {{< fa creative-commons-by >}} unter https://bit.ly/merk128
+:::
+
+
+## Was sind Überzeugungen {{< fa question-circle >}} {.center .smaller}
+Die meisten aktuellen Überblickswerke [@fives2012; @skott2015; @wilde2016] definieren Überzeugungen anhand von Merkmalsbündeln:
+
+::: {.incremental}
+* Überzeugungen sind individuelle Wahrheitspropositionen [@skott2015]
+* Überzeugungen sind kognitiv repräsentiert aber *»inextricably linked«* mit affektiven Komponenten [@gill2015]
+* Überzeugungen sind vergleichsweise zeit- und kontextinvariant [@gates2006]
+* Überzeugungen sind über eine Filter-, Rahmungs- und Steuerungsfunktion handlungsrelevant [@fives2012]
+:::
+
+. . .
+
+![](img/Filtering_Framing_Guiding.png){width=30%}
+
+::: {.notes}
+Wahrheitspropositionen:
+* «Am vorgerechneten Beispiel lernen die Schüler/innen am besten.»
+* Scientist can ultimately get to the truth
+Affekt:
+* “an embodied reaction of pleasure or displeasure signifying the goodness or badness of something” (Clore & Palmer, 2009, p. 21)
+* Affect Influences Beliefs: In one study, participants were induced into a happy or sad mood and then asked to watch videotapes of their past social interactions
+* Beliefs Influence Affect: Reaktion auf Lernstilmythos
+:::
+
+
+
+
+## Weitere Charakteristika {.smaller}
+* Überzeugungen stellen *latente* Konstrukte dar, da aus der Datenstruktur nur mit vglw. großer Unsicherheit auf die Merkmalsstruktur geschlossen werden kann [@borsboom2008]
+* Typische Erfassungen stellen reflektive Maße dar <br> 
+<center>![](img/Formatives_Reflektives_MM.png){width=20%}</center>
+* Überzeugungen lassen sich wie folgt zu verwandten Konstrukten abgrenzen: <br>
+
+:::{style="font-size: .6em;"}
+
+| Konstruktklasse         | Proposition bzgl. …                                         | Spektrum                                                          |
+|-------------------------|-------------------------------------------------------------|-------------------------------------------------------------------|
+| Beliefs/Überzeugungen   | … Wahrheit                                                  | Dichotom oder kontinuierlich von wahr bis falsch                  |
+| Values/Werte            | … abstrakter, transsituationaler, nicht erreichbarer Ideale | Ranking relativer Bedeutsamkeit                                   |
+| Goals/Ziele             | … erreichbarer Zustände und erreichbarem Verhalten          | Kontinuierlich unipolar von nicht wünschenswert bis wünschenswert |
+| Attitudes/Einstellungen | … Bewertungen operationalisierbarer Entitäten               | Kontinuierlich bipolar von negativ über neutral bis positiv       |
+
+: {tbl-colwidths="[15,28,40]"}
+:::
+
+
+## [Überzeugungen ⇄ Professionalität? {{< fa chalkboard-user >}}]{style="font-size: .9em;"} {.center background-color="black" .smaller}
+
+## Im kompetenztheoretischen Ansatz {.center}
+:::: {.columns}
+
+::: {.column width='50%'}
+![](img/Baumert2006.png){}
+:::
+
+::: {.column width='50%'}
+![](img/Filtering_Framing_Guiding.png){}
+:::
+
+::::
+
+
+## Im berufsbiographischen Ansatz {.center}
+
+. . .
+
+![](img/blank.png){}
+
+
+## Im strukturtheoretischen Ansatz {.center}
+![](img/blank2.png){}
+
+## Entwicklungsfelder {{< fa person-digging >}} {.center background-color="black"}
+
+## Entwicklungsfelder {{< fa person-digging >}} {.center .smaller}
+* Konstrukte möglichst klar abgrenzen [@pajares1992]
+* Measurements validieren und wiederverwenden [@elson2023]
+* Causal Inference [@rohrer2018] stärken
+    * Experimentelle Designs [@rosenthal1968a; @schmidt2022a]
+    * Do-Calculus [@pearl2016]
+    * Post-Treatment Bias vermeiden [@montgomery2018]
+
+## Literatur
+<style>
+div.callout {border-left-color: #8cd000 !important;
+</style>
