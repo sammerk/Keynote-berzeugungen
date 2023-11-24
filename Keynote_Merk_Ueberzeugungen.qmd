@@ -4,7 +4,7 @@ subtitle: "und Professionalität von Lehrkräften"
 author: "Samuel Merk"
 format: 
   revealjs:
-      auto-stretch: true
+      auto-stretch: false
       self-contained: true
       controls: true
       slide-number: c/t
@@ -55,7 +55,7 @@ sash <-
                aes(x,y), fill = "#8cd000") + 
   coord_fixed() +
   annotate(geom = "text", 
-           label = " ", 
+           label = "www.bit.ly/merk123", 
            x = .8, y = .8, 
            angle = 45,
            hjust = 0, vjust = 0,
@@ -87,7 +87,7 @@ figure>figcaption {
 ```
 
 ::: footer
-Folien CC-BY {{< fa creative-commons-by >}} unter https://bit.ly/merk128
+Folien cc-by {{< fa brands creative-commons-by >}} unter https://bit.ly/merk123 [{{< fa external-link-square-alt >}}]{.imp}
 :::
 
 
@@ -115,23 +115,29 @@ Affekt:
 * Beliefs Influence Affect: Reaktion auf Lernstilmythos
 :::
 
-
+::: footer
+Folien cc-by {{< fa brands creative-commons-by >}} unter https://bit.ly/merk123 [{{< fa external-link-square-alt >}}]{.imp}
+:::
 
 
 ## Weitere Charakteristika {.smaller}
+::: {.incremental}
 * Überzeugungen stellen *latente* Konstrukte dar, da aus der Datenstruktur nur mit vglw. großer Unsicherheit auf die Merkmalsstruktur geschlossen werden kann [@borsboom2008]
 * Typische Erfassungen stellen reflektive Maße dar <br> 
 <center>![](img/Formatives_Reflektives_MM.png){width=20%}</center>
 * Überzeugungen lassen sich wie folgt zu verwandten Konstrukten abgrenzen: <br>
+:::
+
+. . .
 
 :::{style="font-size: .6em;"}
 
 | Konstruktklasse         | Proposition bzgl. …                                         | Spektrum                                                          |
 |-------------------------|-------------------------------------------------------------|-------------------------------------------------------------------|
 | Beliefs/Überzeugungen   | … Wahrheit                                                  | Dichotom oder kontinuierlich von wahr bis falsch                  |
-| Values/Werte            | … abstrakter, transsituationaler, nicht erreichbarer Ideale | Ranking relativer Bedeutsamkeit                                   |
-| Goals/Ziele             | … erreichbarer Zustände und erreichbarem Verhalten          | Kontinuierlich unipolar von nicht wünschenswert bis wünschenswert |
 | Attitudes/Einstellungen | … Bewertungen operationalisierbarer Entitäten               | Kontinuierlich bipolar von negativ über neutral bis positiv       |
+| Goals/Ziele             | … erreichbarer Zustände und erreichbarem Verhalten          | Kontinuierlich unipolar von nicht wünschenswert bis wünschenswert |
+| Values/Werte            | … abstrakter, transsituationaler, nicht erreichbarer Ideale | Ranking relativer Bedeutsamkeit                                   |
 
 : {tbl-colwidths="[15,28,40]"}
 :::
@@ -166,14 +172,32 @@ Affekt:
 ## Entwicklungsfelder {{< fa person-digging >}} {.center background-color="black"}
 
 ## Entwicklungsfelder {{< fa person-digging >}} {.center .smaller}
+::: {.incremental}
 * Konstrukte möglichst klar abgrenzen [@pajares1992]
 * Measurements validieren und wiederverwenden [@elson2023]
 * Causal Inference [@rohrer2018] stärken
     * Experimentelle Designs [@rosenthal1968a; @schmidt2022a]
     * Do-Calculus [@pearl2016]
     * Post-Treatment Bias vermeiden [@montgomery2018]
+:::
 
-## Literatur
+. . .
+
+:::: {.columns}
+
+::: {.column width='50%'}
+![](img/Confounding.png){}
+:::
+
+::: {.column width='50%'}
+<br><br>
+![](img/PosttreatmentBias.png){}
+:::
+
+::::
+
+
+## Literatur {.smaller}
 <style>
 div.callout {border-left-color: #8cd000 !important;
 </style>
